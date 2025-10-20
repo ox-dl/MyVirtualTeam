@@ -1,0 +1,52 @@
+# ---- Build results ----
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Tt]est[Rr]esult*/
+[Rr]elease*/
+[Dd]ebug*/
+
+# ---- User-specific files ----
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ---- Visual Studio ----
+.vs/
+.vscode/
+
+# ---- DotNet / NuGet ----
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+.nuget/
+packages/
+*.nuget.props
+*.nuget.targets
+
+# ---- Temporary files ----
+*.tmp
+*.temp
+*.bak
+*.log
+
+# ---- OS-specific ----
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+ehthumbs.db
+# Linux
+*~
+
+# ---- Rider / ReSharper ----
+.idea/
+_ReSharper*/
+*.DotSettings.user
+
+# ---- Publish output ----
+publish/
