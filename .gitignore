@@ -13,6 +13,9 @@
 *.userosscache
 *.sln.docstates
 
+# ---- Dev only ----
+assets/dev/
+
 # ---- Visual Studio ----
 .vs/
 .vscode/
