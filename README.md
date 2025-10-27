@@ -11,8 +11,8 @@ MyVirtualTeam is a desktop tool that allows you to emulate multiple local Window
 It is ideal for testing, automation, or locally distributed workflows.
 
 ## Requirements
-- **Windows 10/11 Pro (or higher)** ñ required to enable and use **Hyper-V**.  
-- **.NET Desktop Runtime 8.0 or later** ñ required to run the application.  
+- **Windows 10/11 Pro (or higher)** ÔøΩ required to enable and use **Hyper-V**.  
+- **.NET Desktop Runtime 8.0 or later** ÔøΩ required to run the application.  
   You can download it from the official [.NET website](https://dotnet.microsoft.com/en-us/download/dotnet).  
 
 > Note: The application is currently designed as a framework-dependent build.  
@@ -40,6 +40,18 @@ Before using MyVirtualTeam, make sure your system meets the [Requirements](#requ
    - Save and manage tasks directly from the application interface.
 
 6. **Monitor and control** your virtual machines from the MyVirtualTeam interface.
+
+## ‚ö†Ô∏è Warning ‚Äì License Responsibility
+
+This project **does not include, distribute, or install any proprietary operating system** (such as Microsoft Windows).  
+It only provides automation tools for creating and managing virtual machines through Hyper-V.
+
+**Important:**  
+If you use this software to create or run virtual machines containing **Microsoft Windows** (or any other proprietary software),  
+you must have a **valid license** for each instance of the operating system used.  
+Owning a Windows 10/11 Pro license on your host machine **does not automatically authorize** running Windows inside one or more virtual machines.
+
+The author of this project **assumes no responsibility** for any misuse or violation of third-party software licenses.
 
 ## License
 This project is licensed under the **GPL-3.0** license. See the [LICENSE](./LICENSE) file for details.
