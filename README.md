@@ -1,7 +1,7 @@
 # MyVirtualTeam for Windows
 
 <p align="center">
-  <img src="assets/MVT_Logo.png" alt="MyVirtualTeam Logo" width="300">
+  <img src="./docs/img/App_Logo.png" alt="MyVirtualTeam Logo" width="300">
 </p>
 
 <p align="center"><em>Manage your local virtual lab easily with Hyper-V</em></p>

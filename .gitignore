@@ -14,7 +14,7 @@
 *.sln.docstates
 
 # ---- Dev only ----
-assets/dev/
+dev/
 
 # ---- Visual Studio ----
 .vs/
