@@ -11,7 +11,7 @@ MyVirtualTeam is a desktop tool that allows you to emulate multiple local Window
 It is ideal for testing, automation, or locally distributed workflows.
 
 **Documentation:**  
-You can access the full documentation on [GitHub Pages](https://ox-dl.github.io/MyVirtualTeam/).
+The complete documentation is available [here](https://ox-dl.github.io/MyVirtualTeam/).
 
 ## Requirements
 - **Windows 10/11 Pro (or higher)** — required to enable and use **Hyper-V**.  
