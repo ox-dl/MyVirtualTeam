@@ -4,75 +4,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Documentation and guides for My Virtual Team (MVT), including installation, projects, sequences, troubleshooting, and usage tips.">
   <link rel="stylesheet" href="./css/style.css">
-  <title>MVT - Overview</title>
   <link rel="shortcut icon" href="./img/App_Logo.png" type="image/x-icon">
+  <title>My Virtual Team | Overview</title>
 </head>
 
 <body>
 
   <header>
-    <a class="logo" href="./">
+    <a class="logo" href="https://github.com/ox-dl/MyVirtualTeam">
       <img class="logo__icon icon" src="./img/App_Logo.png" alt="MVT Logo">
-      <p>
-        My Virtual Team
-      </p>
+      <p>My Virtual Team</p>
     </a>
     <button class="theme" type="button">
       <img id="themeIcon">
     </button>
   </header>
 
-  <nav>
+  <nav class="site-nav">
     <ul>
-      <li>
-        <a class="link current-page" href="./">
-          Overview
-        </a>
-      </li>
-      <li>
-        <a class="link" href="./getting-started.html">
-          Getting Started
-        </a>
-      </li>
-      <li>
-        <a class="link" href="./projects.html">
-          Projects
-        </a>
-      </li>
-      <li>
-        <a class="link" href="./sequences.html">
-          Sequences
-        </a>
-      </li>
-      <li>
-        <a class="link" href="./profile.html">
-          Profile
-        </a>
-      </li>
-      <li>
-        <a class="link" href="./references.html">
-          References
-        </a>
-      </li>
-      <li>
-        <a class="link" href="https://github.com/ox-dl/MyVirtualTeam/issues">
-          Issues
-        </a>
-      </li>
-      <li>
-        <a class="link" href="https://github.com/ox-dl/MyVirtualTeam/releases">
-          Releases
-        </a>
-      </li>
+      <li><a class="site-nav__link site-nav__link--current" href="./">Welcome</a></li>
+      <li><a class="site-nav__link" href="./get-started.html">Get Started</a></li>
+      <li><a class="site-nav__link" href="./projects.html">Projects</a></li>
+      <li><a class="site-nav__link" href="./sequences.html">Sequences</a></li>
+      <li><a class="site-nav__link" href="./references.html">References</a></li>
+      <li><a class="site-nav__link" href="./troubleshooting.html">Troubleshooting</a></li>
+    </ul>
+    <ul>
+      <li><a class="site-nav__link" href="https://github.com/ox-dl/MyVirtualTeam/issues">Issues</a></li>
+      <li><a class="site-nav__link" href="https://github.com/ox-dl/MyVirtualTeam/releases">Releases</a></li>
     </ul>
   </nav>
 
   <main>
-    Overview
+    <div class="content">
+      <h1>Welcome to MVT</h1>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          My Virtual Team is a powerful tool designed to help you manage and automate your workflows efficiently.
+          Whether you're coordinating a team or handling individual tasks, MVT provides the features you need to stay
+          organized and productive.
+        </p>
+      </section>
+      <section id="features">
+        <h2>Key Features</h2>
+        <ul>
+          <li>Project Management: Create, track, and manage your projects with ease.</li>
+          <li>Sequence Automation: Automate repetitive tasks and workflows to save time.</li>
+          <li>Comprehensive References: Access detailed documentation and resources to help you get the most out of MVT.
+          </li>
+        </ul>
+      </section>
+      <div class="next-step">
+        <div class="next-step-window">
+          <p>Ready for ?</p>
+          <nav class="page-change">
+            <a class="page-change__link page-change__link--next" href="./get-started.html">
+              Get Started<span>&rarr;</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <nav class="page-nav">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#features">Key Features</a></li>
+      </ul>
+    </nav>
   </main>
 
   <script src="./js/theme.js"></script>
+  <script src="./js/navBar.js" async></script>
 
 </body>
 

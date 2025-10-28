@@ -4,75 +4,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Documentation and guides for My Virtual Team (MVT), including installation, projects, sequences, troubleshooting, and usage tips.">
   <link rel="stylesheet" href="./css/style.css">
-  <title>MVT - References</title>
+  <title>My Virtual Team | References</title>
   <link rel="shortcut icon" href="./img/App_Logo.png" type="image/x-icon">
 </head>
 
 <body>
 
   <header>
-    <a class="logo" href="./">
+    <a class="logo" href="https://github.com/ox-dl/MyVirtualTeam">
       <img class="logo__icon icon" src="./img/App_Logo.png" alt="MVT Logo">
-      <p>
-        My Virtual Team
-      </p>
+      <p>My Virtual Team</p>
     </a>
     <button class="theme" type="button">
       <img id="themeIcon">
     </button>
   </header>
 
-  <nav>
+  <nav class="site-nav">
     <ul>
-      <li>
-        <a class="link" href="./">
-          Overview
-        </a>
-      </li>
-      <li>
-        <a class="link" href="./getting-started.html">
-          Getting Started
-        </a>
-      </li>
-      <li>
-        <a class="link" href="./projects.html">
-          Projects
-        </a>
-      </li>
-      <li>
-        <a class="link" href="./sequences.html">
-          Sequences
-        </a>
-      </li>
-      <li>
-        <a class="link" href="./profile.html">
-          Profile
-        </a>
-      </li>
-      <li>
-        <a class="link current-page" href="./references.html">
-          References
-        </a>
-      </li>
-      <li>
-        <a class="link" href="https://github.com/ox-dl/MyVirtualTeam/issues">
-          Issues
-        </a>
-      </li>
-      <li>
-        <a class="link" href="https://github.com/ox-dl/MyVirtualTeam/releases">
-          Releases
-        </a>
-      </li>
+      <li><a class="site-nav__link" href="./">Welcome</a></li>
+      <li><a class="site-nav__link" href="./get-started.html">Get Started</a></li>
+      <li><a class="site-nav__link" href="./projects.html">Projects</a></li>
+      <li><a class="site-nav__link" href="./sequences.html">Sequences</a></li>
+      <li><a class="site-nav__link site-nav__link--current" href="./references.html">References</a></li>
+      <li><a class="site-nav__link" href="./troubleshooting.html">Troubleshooting</a></li>
+    </ul>
+    <ul>
+      <li><a class="site-nav__link" href="https://github.com/ox-dl/MyVirtualTeam/issues">Issues</a></li>
+      <li><a class="site-nav__link" href="https://github.com/ox-dl/MyVirtualTeam/releases">Releases</a></li>
     </ul>
   </nav>
 
   <main>
-    References
+    <div class="content">
+      <h1>References</h1>
+      <section id="documentations">
+        <h2>Official Documentations</h2>
+        <p>
+          This section provides links to official documentation and resources related to the technologies used in
+          MyVirtualTeam.
+        </p>
+        <ul>
+          <li><a href="https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/">Hyper-V Documentation</a>
+          </li>
+          <li><a href="https://learn.microsoft.com/en-us/dotnet/">.NET Documentation</a></li>
+        </ul>
+      </section>
+      <section id="libraries">
+        <h2>Third-Party Libraries</h2>
+        <ul>
+          <li>PowerShell – Scripting and automation</li>
+          <li>Other open-source tools used in MyVirtualTeam</li>
+        </ul>
+      </section>
+      <section id="resources">
+        <h2>Community Resources</h2>
+        <ul>
+          <li>GitHub repository for issues, releases, and discussions</li>
+          <li>Forums or tutorials related to virtual machines and automation</li>
+        </ul>
+      </section>
+      <section id="glossary">
+        <h2>Glossary</h2>
+        <ul>
+          <li>VM: Virtual Machine</li>
+          <li>VHD: Virtual Hard Disk</li>
+          <li>Sequence: Predefined set of actions in MyVirtualTeam</li>
+        </ul>
+      </section>
+      <div class="next-step">
+        <div class="next-step-window">
+          <p>Ready for ?</p>
+          <nav class="page-change">
+            <a href="./sequences.html" class="page-change__link page-change__link--prev">
+              <span>&larr;</span> Sequences
+            </a>
+            <a href="./troubleshooting.html" class="page-change__link page-change__link--next">
+              Troubleshooting<span>&rarr;</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <nav class="page-nav">
+      <ul>
+        <li><a href="#documentations">Documentations</a></li>
+        <li><a href="#libraries">Libraries</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#glossary">Glossary</a></li>
+      </ul>
+    </nav>
   </main>
 
   <script src="./js/theme.js"></script>
+  <script src="./js/navBar.js" async></script>
 
 </body>
 

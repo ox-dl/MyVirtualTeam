@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Documentation and guides for My Virtual Team (MVT), including installation, projects, sequences, troubleshooting, and usage tips.">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./img/App_Logo.png" type="image/x-icon">
+  <title>Troubleshooting – MyVirtualTeam</title>
+</head>
+
+<body>
+
+  <header>
+    <a class="logo" href="https://github.com/ox-dl/MyVirtualTeam">
+      <img class="logo__icon icon" src="./img/App_Logo.png" alt="MVT Logo">
+      <p>My Virtual Team</p>
+    </a>
+    <button class="theme" type="button">
+      <img id="themeIcon">
+    </button>
+  </header>
+
+  <nav class="site-nav">
+    <ul>
+      <li><a class="site-nav__link" href="./">Welcome</a></li>
+      <li><a class="site-nav__link" href="./get-started.html">Get Started</a></li>
+      <li><a class="site-nav__link" href="./projects.html">Projects</a></li>
+      <li><a class="site-nav__link" href="./sequences.html">Sequences</a></li>
+      <li><a class="site-nav__link" href="./references.html">References</a></li>
+      <li><a class="site-nav__link site-nav__link--current" href="./troubleshooting.html">Troubleshooting</a></li>
+    </ul>
+    <ul>
+      <li><a class="site-nav__link" href="https://github.com/ox-dl/MyVirtualTeam/issues">Issues</a></li>
+      <li><a class="site-nav__link" href="https://github.com/ox-dl/MyVirtualTeam/releases">Releases</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="content">
+      <h1>Troubleshooting</h1>
+      <p>
+        This page lists common issues that may occur when using MyVirtualTeam, along with recommended solutions and
+        debugging tips.
+      </p>
+      <section id="installation">
+        <h2>Installation Issues</h2>
+        <ul>
+          <li>
+            <strong>App doesn’t start after installation:</strong>
+            Ensure <em>.NET Desktop Runtime 8.0</em> or later is installed.
+          </li>
+          <li>
+            <strong>Windows blocked the installer:</strong>
+            Click <kbd>More info</kbd> → <kbd>Run anyway</kbd> in the SmartScreen prompt.
+          </li>
+          <li>
+            <strong>Hyper-V not found:</strong>
+            Enable Hyper-V in Windows features or check that your Windows edition supports it.
+          </li>
+        </ul>
+      </section>
+      <section id="errors">
+        <h2>Hyper-V Errors</h2>
+        <ul>
+          <li>
+            <strong>The virtual machine could not be started:</strong>
+            Verify your user account has administrative privileges.
+          </li>
+          <li>
+            <strong>Network adapter not found:</strong>
+            Create or select a valid Virtual Switch in Hyper-V Manager.
+          </li>
+          <li>
+            <strong>VMs not appearing in list:</strong>
+            Refresh the dashboard or restart MyVirtualTeam as Administrator.
+          </li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h2>Projects Issues</h2>
+        <ul>
+          <li><strong>Project fails to load:</strong> Check the project file for corruption or missing files.</li>
+          <li><strong>VMs not created:</strong> Ensure sufficient disk space and permissions to create VHD files.</li>
+          <li><strong>Import errors:</strong> Verify the source project is compatible and not corrupted.</li>
+        </ul>
+      </section>
+      <section id="sequences">
+        <h2>Sequences Issues</h2>
+        <ul>
+          <li><strong>Sequence fails to start:</strong> Check that all required VMs are running and accessible.</li>
+          <li><strong>Actions not executing:</strong> Verify action configurations and network connectivity.</li>
+          <li><strong>Sequence hangs:</strong> Review logs for errors and ensure no conflicting processes are running.
+          </li>
+        </ul>
+      </section>
+      <section id="performance">
+        <h2>Performance and Resource Usage</h2>
+        <ul>
+          <li><strong>VMs are slow to start:</strong> Allocate more CPU or RAM per VM.</li>
+          <li><strong>Host is unresponsive:</strong> Reduce the number of concurrent virtual machines.</li>
+          <li><strong>Disk fills quickly:</strong> Monitor VHD file growth and clean up old snapshots.</li>
+        </ul>
+      </section>
+      <section id="reporting">
+        <h2>Reporting a Problem</h2>
+        <p>
+          If you can’t resolve your issue, please report it with:
+        </p>
+        <ul>
+          <li>Steps to reproduce</li>
+          <li>Your Windows and .NET version</li>
+          <li>Log file from <code>%AppData%\MyVirtualTeam\Logs\</code></li>
+        </ul>
+      </section>
+      <div class="next-step">
+        <div class="next-step-window">
+          <p>Back to ?</p>
+          <nav class="page-change">
+            <a href="./references.html" class="page-change__link page-change__link--prev">
+              <span>&larr;</span> References
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <nav class="page-nav">
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#errors">Hyper-V</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#sequences">Sequences</a></li>
+        <li><a href="#performance">Performance</a></li>
+        <li><a href="#reporting">Reporting</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <script src="./js/theme.js"></script>
+  <script src="./js/navBar.js" async></script>
+
+</body>
+
+</html>
