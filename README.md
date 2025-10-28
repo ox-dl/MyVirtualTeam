@@ -10,12 +10,15 @@
 MyVirtualTeam is a desktop tool that allows you to emulate multiple local Windows machines managed via Hyper-V.  
 It is ideal for testing, automation, or locally distributed workflows.
 
+**Documentation:**  
+You can access the full documentation on [GitHub Pages](https://ox-dl.github.io/MyVirtualTeam/).
+
 ## Requirements
-- **Windows 10/11 Pro (or higher)** � required to enable and use **Hyper-V**.  
-- **.NET Desktop Runtime 8.0 or later** � required to run the application.  
+- **Windows 10/11 Pro (or higher)** — required to enable and use **Hyper-V**.  
+- **.NET Desktop Runtime 8.0 or later** — required to run the application.  
   You can download it from the official [.NET website](https://dotnet.microsoft.com/en-us/download/dotnet).  
 
-> Note: The application is currently designed as a framework-dependent build.  
+> **Note:** The application is currently designed as a framework-dependent build.  
 > This means users must have the .NET Desktop Runtime installed on their system.
 
 ## Download
