@@ -8,7 +8,5 @@ namespace MyVirtualTeam.App.ViewModels
 {
     public class NewProjectViewModel : BaseViewModel
     {
-        public override string Title => "My Virtual Team - New Project";
-
     }
 }

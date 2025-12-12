@@ -9,16 +9,16 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Assets\Fonts\sen-v12-latin-regular.ttf" />
+		<ProjectReference Include="..\MyVirtualTeam.Core\MyVirtualTeam.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Resource Include="Assets\Fonts\sen-v12-latin-regular.ttf">
-		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</Resource>
 		<Resource Include="Assets\Images\App_Logo.ico">
-		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</Resource>
 	</ItemGroup>
-	
+
 </Project>

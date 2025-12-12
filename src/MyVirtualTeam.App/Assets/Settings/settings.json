@@ -1,0 +1,52 @@
+{
+  "Theme": {
+    "PreferredMode": "Light"
+  },
+  "UserPreferences": {
+    "Language": "en-US"
+  },
+  "Shortcuts": {
+    //File
+    "NewProject": "Ctrl+N",
+    "OpenProject": "Ctrl+O",
+    "RecentProject": "",
+    "Save": "Ctrl+S",
+    "SaveAll": "Ctrl+Shift+S",
+    "CloseProject": "Ctrl+W",
+    "ExportProject": "",
+    "ExportEvent": "",
+    "ExportSequence": "",
+    "Exit": "Alt+F4",
+    //Edit
+    "Undo": "Ctrl+Z",
+    "Redo": "Ctrl+Shift+Z",
+    "SelectAll": "Ctrl+A",
+    "Cut": "Ctrl+X",
+    "Copy": "Ctrl+C",
+    "Paste": "Ctrl+V",
+    "OpenSettings": "Ctrl+,",
+    //vMachines
+    "GoToVMachines": "1",
+    "AddVMachine": "",
+    "DeleteVMachine": "",
+    "PlayVMachine": "",
+    "StandbyVMachine": "",
+    "ConnectVMachine": "",
+    //Events
+    "GoToEvents": "2",
+    "NewEvent": "",
+    "OpenEvent": "",
+    "DeleteEvent": "",
+    "PlayEvent": "",
+    "ReloadEvent": "",
+    "StopEvent": "",
+    //Sequences
+    "GoToSequences": "3",
+    "NewSequence": "",
+    "OpenSequence": "",
+    "DeleteSequence": "",
+    "RecordSequence": "",
+    "StopSequence": "",
+    "SaveSequence": ""
+  }
+}

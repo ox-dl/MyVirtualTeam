@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyVirtualTeam.App.ViewModels
+namespace MyVirtualTeam.Core.Configuration
 {
-    public class EventsViewModel : BaseViewModel
+    internal class AppSettings
     {
     }
 }

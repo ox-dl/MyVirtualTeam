@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyVirtualTeam.App.ViewModels
 {
-    class SequencesViewModel
+    public class SequencesViewModel : BaseViewModel
     {
     }
 }

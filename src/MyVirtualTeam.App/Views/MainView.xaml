@@ -1,52 +1,165 @@
 ﻿<Window
-    x:Class="MyVirtualTeam.App.Views.MainView"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:MyVirtualTeam.App"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:views="clr-namespace:MyVirtualTeam.App.Views"
-    Title="{Binding Title}"
-    Width="800"
-    Height="500"
-    Icon="/Assets/Images/App_Logo.ico"
-    mc:Ignorable="d">
+  x:Class="MyVirtualTeam.App.Views.MainView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:local="clr-namespace:MyVirtualTeam.App"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:views="clr-namespace:MyVirtualTeam.App.Views"
+  Title="{Binding Title}"
+  Width="800"
+  Height="500"
+  Icon="/Assets/Images/App_Logo.ico"
+  Loaded="Window_Loaded"
+  mc:Ignorable="d">
 
-    <DockPanel LastChildFill="True">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid Grid.Row="0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="100" />
+      </Grid.ColumnDefinitions>
+      <Menu Grid.Column="0" Style="{StaticResource TopMenu}">
+        <MenuItem Header="File" Template="{StaticResource TopMenuItem}">
+          <MenuItem
+            Command="{Binding NavigateCommand}"
+            CommandParameter="NewProject"
+            Header="New"
+            Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem
+            Command="{Binding LoadProjectCommand}"
+            Header="Open"
+            Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Open Recent" Template="{StaticResource TopSubMenuPopup}">
+            <MenuItem Header="Example1" Template="{StaticResource TopSubMenuItem}" />
+            <MenuItem Header="Example2" Template="{StaticResource TopSubMenuItem}" />
+            <MenuItem Header="Example3" Template="{StaticResource TopSubMenuItem}" />
+            <Separator />
+            <MenuItem Header="Clear List..." Template="{StaticResource TopSubMenuItem}" />
+          </MenuItem>
+          <MenuItem
+            Command="{Binding NavigateCommand}"
+            CommandParameter="Home"
+            Header="Close Project"
+            Template="{StaticResource TopSubMenuItem}" />
+          <Separator />
+          <MenuItem Header="Save" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Save All" Template="{StaticResource TopSubMenuItem}" />
+          <Separator />
+          <MenuItem Header="Export" Template="{StaticResource TopSubMenuPopup}">
+            <MenuItem Header="Project" Template="{StaticResource TopSubMenuItem}" />
+            <MenuItem Header="Event" Template="{StaticResource TopSubMenuItem}" />
+            <MenuItem Header="Sequence" Template="{StaticResource TopSubMenuItem}" />
+          </MenuItem>
+          <Separator />
+          <MenuItem
+            Command="{Binding ExitCommand}"
+            Header="Exit"
+            Template="{StaticResource TopSubMenuItem}" />
+        </MenuItem>
+        <MenuItem Header="Edit" Template="{StaticResource TopMenuItem}">
+          <MenuItem Header="Undo" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Redo" Template="{StaticResource TopSubMenuItem}" />
+          <Separator />
+          <MenuItem Header="Select All" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Cut" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Copy" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Paste" Template="{StaticResource TopSubMenuItem}" />
+          <Separator />
+          <MenuItem
+            Command="{Binding NavigateCommand}"
+            CommandParameter="Settings"
+            Header="Settings"
+            Template="{StaticResource TopSubMenuItem}" />
+        </MenuItem>
+        <MenuItem Header="vMachines" Template="{StaticResource TopMenuItem}">
+          <MenuItem
+            Command="{Binding NavigateCommand}"
+            CommandParameter="VirtualMachines"
+            Header="Go to Virtual Machines"
+            Template="{StaticResource TopSubMenuItem}" />
+          <Separator />
+          <MenuItem Header="Add" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Delete" Template="{StaticResource TopSubMenuItem}" />
+          <Separator />
+          <MenuItem Header="Play" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Standby" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Connect" Template="{StaticResource TopSubMenuItem}" />
+        </MenuItem>
+        <MenuItem Header="Events" Template="{StaticResource TopMenuItem}">
+          <MenuItem
+            Command="{Binding NavigateCommand}"
+            CommandParameter="Events"
+            Header="Go to Events"
+            Template="{StaticResource TopSubMenuItem}" />
+          <Separator />
+          <MenuItem Header="New" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Open" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Delete" Template="{StaticResource TopSubMenuItem}" />
+          <Separator />
+          <MenuItem Header="Play" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Reload" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Stop" Template="{StaticResource TopSubMenuItem}" />
+        </MenuItem>
+        <MenuItem Header="Sequences" Template="{StaticResource TopMenuItem}">
+          <MenuItem
+            Command="{Binding NavigateCommand}"
+            CommandParameter="Sequences"
+            Header="Go to Sequences"
+            Template="{StaticResource TopSubMenuItem}" />
+          <Separator />
+          <MenuItem Header="New" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Open" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Delete" Template="{StaticResource TopSubMenuItem}" />
+          <Separator />
+          <MenuItem Header="Record" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Stop" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Save" Template="{StaticResource TopSubMenuItem}" />
+        </MenuItem>
+      </Menu>
+      <Menu
+        Grid.Column="1"
+        HorizontalAlignment="Right"
+        Style="{StaticResource TopMenu}">
+        <MenuItem
+          x:Name="AboutBtn"
+          Header="About"
+          Template="{StaticResource TopMenuItem}">
+          <MenuItem Header="Version" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Documentation" Template="{StaticResource TopSubMenuItem}" />
+          <MenuItem Header="Report a bug" Template="{StaticResource TopSubMenuItem}" />
+        </MenuItem>
+      </Menu>
+    </Grid>
 
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="File" Style="{DynamicResource AppMenuItemStyle}">
-                <MenuItem Command="{Binding NewProjectCommand}" Header="New" />
-                <MenuItem Command="{Binding OpenProjectCommand}" Header="Open" />
-                <MenuItem Command="{Binding RecentProjectCommand}" Header="Open Recent">
-                    <MenuItem Header="Empty" />
-                    <MenuItem Header="Clear" />
-                </MenuItem>
-                <Separator />
-                <MenuItem Command="{Binding SaveProjectCommand}" Header="Save" />
-                <MenuItem Command="{Binding SaveProjectCommand}" Header="Save All" />
-                <Separator />
-                <MenuItem Command="{Binding SaveProjectCommand}" Header="Close Project" />
-                <Separator />
-                <MenuItem Header="Export">
-                    <MenuItem Header="Project" />
-                    <MenuItem Header="Event" />
-                    <MenuItem Header="Sequence" />
-                </MenuItem>
-                <Separator />
-                <MenuItem Command="{Binding SaveProjectCommand}" Header="Exit" />
-            </MenuItem>
-            <MenuItem Header="Edit">
-                <MenuItem Header="Coucou" />
-            </MenuItem>
-            <MenuItem Header="Machines" />
-            <MenuItem Header="Events" />
-            <MenuItem Header="Sequences" />
-            <MenuItem Header="About" />
-        </Menu>
+    <ContentControl Grid.Row="1" Content="{Binding CurrentView}" />
 
-        <ContentControl Content="{Binding CurrentView}" />
+    <Grid Grid.Row="2" Height="40">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
 
-    </DockPanel>
+      <Menu Grid.Column="0" Style="{StaticResource BottomMenu}">
+        <MenuItem Header="vMachines" Template="{StaticResource BottomMenuItem}">
+          <MenuItem Header="Events" />
+          <MenuItem Header="Sequences" />
+        </MenuItem>
+      </Menu>
 
+      <TextBlock
+        Grid.Column="1"
+        Margin="0,0,12,0"
+        HorizontalAlignment="Right"
+        VerticalAlignment="Center"
+        Foreground="{StaticResource Static.Border}"
+        Text="Version 1.0.0-alpha" />
+
+    </Grid>
+  </Grid>
 </Window>

@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <Color x:Key="Bckg">#FFFFFF</Color>
+  <Color x:Key="BckgAlt">#F2F2F2</Color>
+  <Color x:Key="Border">#BFBFBF</Color>
+  <Color x:Key="Text">#333333</Color>
+
+</ResourceDictionary>

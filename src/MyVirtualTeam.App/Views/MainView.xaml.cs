@@ -1,26 +1,43 @@
 ﻿using MyVirtualTeam.App.ViewModels;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
+using System.Windows.Controls.Primitives;
 using System.Windows.Shapes;
 
 namespace MyVirtualTeam.App.Views
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainView : Window
     {
         public MainView()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+
+            var settingsViewModel = new SettingsViewModel();
+            DataContext = new MainViewModel(settingsViewModel);
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            CustomizeTopBarPopup();
+        }
+
+        private void CustomizeTopBarPopup()
+        {
+            var target = AboutBtn;
+
+            if (target != null && target.Template != null)
+            {
+                if (target.Template.FindName("PART_Popup", target) is Popup popup)
+                {
+                    popup.Placement = PlacementMode.Right;
+                    popup.HorizontalOffset = 4;
+                }
+                if (target.Template.FindName("PopupPositionRef", target) is Rectangle rectangle)
+                {
+                    rectangle.HorizontalAlignment = HorizontalAlignment.Right;
+                }
+            }
+        }
+
+
     }
 }

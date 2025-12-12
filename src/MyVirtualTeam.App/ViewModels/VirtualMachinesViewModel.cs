@@ -8,7 +8,5 @@ namespace MyVirtualTeam.App.ViewModels
 {
     public class VirtualMachinesViewModel : BaseViewModel
     {
-        public override string Title => "My Virtual Team - Virtual Machines";
-
     }
 }
